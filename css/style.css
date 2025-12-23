@@ -1,0 +1,436 @@
+/* ======================================================
+   Global Reset & Base
+====================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background-color: #F3F3F3;
+  color: #111111;
+  line-height: 1.6;
+}
+
+/* ======================================================
+   Containers & Utilities
+====================================================== */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ======================================================
+   Header
+====================================================== */
+.main-header {
+  background-color: #131921;
+  border-bottom: 3px solid #FF9900;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FF9900;
+}
+
+.site-name {
+  color: #FF9900;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Navigation */
+.main-nav a {
+  color: #ffffff;
+  margin-right: 18px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.main-nav a:hover {
+  color: #FF9900;
+}
+
+/* ======================================================
+   Hero Section (Video Banner)
+====================================================== */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-overlay h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #FF9900;
+}
+
+.hero-overlay p {
+  font-size: 16px;
+  max-width: 600px;
+}
+
+/* ======================================================
+   Products Section
+====================================================== */
+.products {
+  padding: 50px 0;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #232F3E;
+  font-size: 26px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  color: #111;
+}
+
+/* ======================================================
+   Contact Page (Base)
+====================================================== */
+.contact-hero {
+  background: linear-gradient(
+    rgba(19,25,33,0.85),
+    rgba(19,25,33,0.85)
+  );
+  padding: 60px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact-hero h1 {
+  color: #FF9900;
+  font-size: 32px;
+}
+
+.contact-wrapper {
+  background: #ffffff;
+  max-width: 1000px;
+  margin: -40px auto 50px;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info h3,
+.contact-form h3 {
+  color: #232F3E;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #FF9900;
+  color: #111;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.contact-form button:hover {
+  background-color: #e68a00;
+}
+
+/* ======================================================
+   Footer
+====================================================== */
+.main-footer {
+  background-color: #232F3E;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.footer-brand img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #FF9900;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+  color: #FF9900;
+  margin-bottom: 12px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: #FF9900;
+}
+
+.footer-contact p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: #131921;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 13px;
+  color: #bbb;
+}
+
+/* ======================================================
+   Responsive
+====================================================== */
+@media (max-width: 768px) {
+
+  .header-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-nav {
+    text-align: center;
+  }
+
+  .hero-overlay h1 {
+    font-size: 26px;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+}
+/* ======================================================
+   Burger Menu – Mobile Only
+====================================================== */
+
+/* Burger Button */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: #FF9900;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* Overlay */
+.nav-overlay {
+  display: none;
+}
+
+/* =========================
+   Mobile Styles
+========================= */
+@media (max-width: 768px) {
+
+  /* Show Burger */
+  .burger {
+    display: flex;
+  }
+
+  /* Hide normal nav */
+  .main-nav {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 280px;
+    height: 100vh;
+    background-color: #131921;
+    padding: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+
+  .main-nav a {
+    color: #ffffff;
+    font-size: 16px;
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .main-nav a:hover {
+    color: #FF9900;
+  }
+
+  /* Active Menu */
+  .main-nav.active {
+    right: 0;
+  }
+
+  /* Overlay */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Animate Burger to X */
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
